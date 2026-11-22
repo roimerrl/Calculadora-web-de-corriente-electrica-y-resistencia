@@ -11,12 +11,13 @@ def materiales(): # Resistividades de los materiales
 def parametros():
     tension = float(input(" Ingrese el voltaje DC suministrado por la fuente: ")) # Voltios
     resistencia_carga = float(input(" ingrese resistencia del dispositivo conectado: ")) # Ohmios
-    material = 
+    material = input("Ingrese el material a utilizar (cobre, aluminio, oro, plata): ").lower() # Material que se va a utilizar
+    resistividad = dic_materiales[material] # Resistividad del material
     longitud_ida = float(input(" Ingrese la distancia fuente-carga: ")) # Metros 
     seccion_transversal = float(input(" Ingrese el area del material conductor: ")) # mm ** 2
 
-    return tension, resistencia_carga, material, longitud_ida, seccion_transversal
+    return tension, resistencia_carga, material, resistividad, longitud_ida, seccion_transversal
 
-def validaciones():
-    
-def modelo_matematico():
+
+dic_materiales = materiales()
+parametros()
