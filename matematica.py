@@ -18,34 +18,6 @@ def parametros(dic_materiales): # Es importante que en la calculadora se especif
 
     return tension, resistencia_carga, material, resistividad, longitud_ida, seccion_transversal
 
-def validaciones(tension, resistencia_carga, material,  longitud_ida, seccion_transversal):
-     while tension <= 0:
-         try:
-             tension = float(input(" ERROR: La tension debe ser mayor a cero, ingrese un nuevo valor: "))
-         except: ValueError
-         print(" Debe ingresar un numero valido (Mayor a 0). ")
-
-     while resistencia_carga <= 0:
-         try:
-                resistencia_carga = float(input(" ERROR: La resistencia de carga debe ser mayor a cero, ingrese un nuevo valor: "))
-         except: ValueError
-         print(" Debe ingresar un numero valido (Mayor a 0). ")
-
-     while longitud_ida <= 0:
-          try:
-                longitud_ida = float(input(" ERROR: La longitud de ida debe ser mayor a cero, ingrese un nuevo valor: "))
-          except: ValueError
-          print (" Debe ingresar un numero valido (Mayor a 0). ")
-
-     while seccion_transversal <= 0:
-          try:
-             seccion_transversal = float(input(" ERROR: La seccion transversal debe ser mayor a cero, ingrese un nuevo valor: "))
-          except: ValueError
-          print(" Debe ingresar un numero valido (Mayor a 0). ")
-     
-     while material not in dic_materiales:
-        material = str(input(" El material que eligio no se encuentra en la lista (cobre, aluminio, oro, plata), ingrese un material valido ")).lower()
-
 def modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal):
     # Se realizaran los calculos en el siguiente orden:
     conversion_area = seccion_transversal * 10 ** -6 # Para pasar de mm^2 a m^2
