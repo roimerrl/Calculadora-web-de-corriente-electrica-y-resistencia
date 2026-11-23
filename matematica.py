@@ -1,6 +1,6 @@
 def materiales(): # Resistividades de los materiales
     materiales = {
-        "cobre": 1.68 * 10 ** -6,
+        "cobre": 1.68 * 10 ** -8,
         "aluminio": 2.65 * 10 ** -8,
         "oro": 2.21 * 10 ** -8,
         "plata": 1.58 * 10 ** -8
@@ -8,7 +8,7 @@ def materiales(): # Resistividades de los materiales
     
     return materiales
 
-def parametros():
+def parametros(dic_materiales):
     tension = float(input(" Ingrese el voltaje DC suministrado por la fuente: ")) # Voltios
     resistencia_carga = float(input(" ingrese resistencia del dispositivo conectado: ")) # Ohmios
     material = input("Ingrese el material a utilizar (cobre, aluminio, oro, plata): ").lower() # Material que se va a utilizar
@@ -19,16 +19,32 @@ def parametros():
     return tension, resistencia_carga, material, resistividad, longitud_ida, seccion_transversal
 
 def validaciones(tension, resistencia_carga, material,  longitud_ida, seccion_transversal):
-     if tension <= 0:
+     while tension <= 0:
+         try:
+             tension = float(input(" ERROR: La tension debe ser mayor a cero, ingrese un nuevo valor: "))
+         except: ValueError
+         print(" Debe ingresar un numero valido (Mayor a 0). ")
+
+     while resistencia_carga <= 0:
+         try:
+                resistencia_carga = float(input(" ERROR: La resistencia de carga debe ser mayor a cero, ingrese un nuevo valor: "))
+         except: ValueError
+         print(" Debe ingresar un numero valido (Mayor a 0). ")
+
+     while longitud_ida <= 0:
+          try:
+                longitud_ida = float(input(" ERROR: La longitud de ida debe ser mayor a cero, ingrese un nuevo valor: "))
+          except: ValueError
+          print (" Debe ingresar un numero valido (Mayor a 0). ")
+
+     while seccion_transversal <= 0:
+          try:
+             seccion_transversal = float(input(" ERROR: La seccion transversal debe ser mayor a cero, ingrese un nuevo valor: "))
+          except: ValueError
+          print(" Debe ingresar un numero valido (Mayor a 0). ")
      
-     if resistencia_carga <= 0:
-
-     if longitud_ida <= 0:
-
-     if seccion_transversal <= 0:
-     
-     if material not in materiales:
-
+     while material not in dic_materiales:
+        material = str(input(" El material que eligio no se encuentra en la lista (cobre, aluminio, oro, plata), ingrese un material valido ")).lower()
 
 def modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal):
     # Se realizaran los calculos en el siguiente orden:
@@ -40,7 +56,12 @@ def modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, se
     caida_tension_cable = corriente_estimada * resistencia_cable
     potencia_disipada = (corriente_estimada ** 2) * resistencia_cable 
 
+    print(f"{resistencia_cable}, {resistencia_total}, {corriente_estimada}, {caida_tension_cable}, {potencia_disipada}")
+
     return conversion_area, longitud_total, resistencia_cable, resistencia_total, corriente_estimada, caida_tension_cable, potencia_disipada
 
 dic_materiales = materiales()
-parametros()
+tension, resistencia_carga, material, resistividad, longitud_ida, seccion_transversal  = parametros(dic_materiales)
+modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal)
+
+
