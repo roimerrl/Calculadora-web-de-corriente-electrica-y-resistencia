@@ -4,7 +4,7 @@
 
 #Ignorar de dependencias
 node_modules/
-__pychache__/
+__pycache__/
 
 #Ignorar archivos del sistema
 .DS_Store
