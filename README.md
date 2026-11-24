@@ -1,4 +1,11 @@
 # Calculadora-web-de-corriente-electrica-y-resistencia
+en este proyecto se desarrollara una calculadora web de corriente electrica con resistencias, facilitando el calculo de las mismas
+esto es temporal chavales jeje
+---
+
+## MODULOS SERVICIOS Y UTILIDADES
+integracion de ambos modulos.. esto es temporal chavales
+
 ## MODULO MATEMATICA
 ### Función materiales()
 Diccionario que almacena las resistividades de 4 materiales: cobre, aluminio, oro y plata. Como variable esta función esta guardada como dic_materiales
@@ -8,5 +15,7 @@ De acuerdo a las variables que el usuario dio en la función anterior, se calcul
 
 ### Notas
 Este modulo actualmente hace los cálculos, pero no hace el print. Ni tampoco coloca las unidades correspondientes de cada parametro
+
+
 
 
