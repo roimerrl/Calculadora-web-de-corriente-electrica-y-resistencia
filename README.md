@@ -3,9 +3,6 @@
 ### Función materiales()
 Diccionario que almacena las resistividades de 4 materiales: cobre, aluminio, oro y plata. Como variable esta función esta guardada como dic_materiales
 
-### Funcion parametros(dic_materiales)
-Le pide al usuario que ingrese las variables de voltaje, resistencia de carga, material, longitud de ida y sección transversal con las que quiera trabajar. Usara la función materiales() para usar la resistividad del material que el usuario haya elegido.
-
 ### Funcion modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal)
 De acuerdo a las variables que el usuario dio en la función anterior, se calcularan los siguientes parámetros en este respectivo orden: Conversión de área, longitud total, resistencia del cable, resistencia total, corriente estimada, caída de la tensión del cable y la potencia disipada
 
