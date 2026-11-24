@@ -1,4 +1,4 @@
-from calculos import materiales
+from Calculadora.materiales import materiales
 
 def modelo_matematico(tension, resistencia_carga, material, longitud_ida, seccion_transversal):
     # Llamamos a la funcion materiales()
