@@ -2,7 +2,7 @@ import streamlit as st
 import os 
 
 def pagina_conocenos():
-    st.header("👨‍💻 Conócenos")
+    st.title(" Conócenos")
     st.write("Conoce al equipo de desarrolladores de esta fantástica calculadora web de corriente eléctrica.")  #xD
     st.write("---")
 

@@ -1,16 +1,16 @@
 import streamlit as st
 
 def pagina_fundamentos():
-    st.title("📖 Fundamentos / Ayuda")
+    st.title(" Fundamentos / Ayuda")
     st.write("Bienvenido a la sección de documentación del simulador. Aquí encontrarás toda la teoría y las reglas que utiliza la aplicación para realizar los calculos.")
     st.write("---")
 
     # Creamos 4 pestañas para organizar la información
     tab1, tab2, tab3, tab4 = st.tabs([
-        "📋 Parámetros de Entrada", 
-        "📐 Fórmulas Matemáticas", 
-        "🧪 Ejemplo de Comprobación", 
-        "⚠️ Supuestos y Limitaciones"
+        " Parámetros de Entrada", 
+        " Fórmulas Matemáticas", 
+        " Ejemplo de Comprobación", 
+        " Supuestos y Limitaciones"
     ])
 
     # --- PESTAÑA 1: PARÁMETROS ---
@@ -80,7 +80,7 @@ def pagina_fundamentos():
     # --- PESTAÑA 4: LIMITACIONES ---
     with tab4:
         st.header("Alcance y Seguridad")
-        st.warning("⚠️ **Aviso importante:** Esta es una simulación didáctica de un circuito DC ideal a 20 °C.")
+        st.warning(" **Aviso importante:** Esta es una simulación didáctica de un circuito DC ideal a 20 °C.")
         
         st.write("La aplicación tiene las siguientes limitaciones estrictas:")
         st.markdown("""

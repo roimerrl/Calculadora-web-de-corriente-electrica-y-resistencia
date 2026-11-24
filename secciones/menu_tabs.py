@@ -8,6 +8,14 @@ from secciones.logs import pagina_logs
 from secciones.reportes import pagina_reportes
 from secciones.conocenos import pagina_conocenos
 
+    #definimos las paginas como variables para que funcionen con botones
+BIENVENIDA=st.Page(pagina_bienvenida, title="Bienvenida", icon="🏠")
+CALCULADORA=st.Page(pagina_calculadora, title="Calculadora", icon="🧮")
+HISTORIAL=st.Page(pagina_historial, title="Historial", icon="📚")
+REPORTES=st.Page(pagina_reportes, title="Reportes", icon="📊")
+LOGS=st.Page(pagina_logs, title="Logs Técnicos", icon="🗒️")
+FUNDAMENTOS_AYUDA=st.Page(pagina_fundamentos, title="Fundamentos / Ayuda", icon="📖")
+CONOCENOS=st.Page(pagina_conocenos, title="Conocenos", icon="👥")
 
 def navegacion():
     # 1. Ponemos el logo centrado usando 3 columnas
@@ -26,19 +34,19 @@ def navegacion():
     nav = st.navigation(
         {
             "Principal":[
-                st.Page(pagina_bienvenida, title="Bievenida", icon="🏠"),
-                st.Page(pagina_calculadora, title="Calculadora", icon="🧮"),
-                st.Page(pagina_historial, title="Historial", icon="📚"),
-                st.Page(pagina_reportes, title="Reportes", icon="📊"),
+                BIENVENIDA,
+                CALCULADORA,
+                HISTORIAL,
+                REPORTES,
             ],
 
             "Sistema": [
-                st.Page(pagina_logs, title="Logs Técnicos", icon="🗒️"),
+                LOGS,
             ],
 
             "Información":[
-                st.Page(pagina_fundamentos, title="Fundamentos / Ayuda", icon="📖"),
-                st.Page(pagina_conocenos, title="Conocenos", icon="👥"),
+                FUNDAMENTOS_AYUDA,
+                CONOCENOS,
             ]
         },
         position="sidebar", #posicion en el menu lateral

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "fecha": "2026-11-24 09:07:46.149199",
+        "entradas": {
+            "tension": 12.0,
+            "resistencia_carga": 10.0,
+            "material": "cobre",
+            "longitud_ida": 5.0,
+            "seccion_transversal": 2.5
+        },
+        "resultados": {
+            "conversion_area": 2.4999999999999998e-06,
+            "longitud_total": 10.0,
+            "resistencia_cable": 0.0672,
+            "resistencia_total": 10.0672,
+            "corriente_estimada": 1.1919898283534647,
+            "caida_tension_cable": 0.08010171646535282,
+            "potencia_disipada": 0.0954804312603538
+        }
+    },
+    {
+        "id": 2,
+        "fecha": "2026-11-24 09:09:12.884266",
+        "entradas": {
+            "tension": 12.0,
+            "resistencia_carga": 10.0,
+            "material": "aluminio",
+            "longitud_ida": 5.0,
+            "seccion_transversal": 2.5
+        },
+        "resultados": {
+            "conversion_area": 2.4999999999999998e-06,
+            "longitud_total": 10.0,
+            "resistencia_cable": 0.10600000000000001,
+            "resistencia_total": 10.106,
+            "corriente_estimada": 1.187413417771621,
+            "caida_tension_cable": 0.12586582228379184,
+            "potencia_disipada": 0.14945476621863268
+        }
+    },
+    {
+        "id": 3,
+        "fecha": "2026-11-24 09:10:28.603095",
+        "entradas": {
+            "tension": 12.0,
+            "resistencia_carga": 10.0,
+            "material": "cobre",
+            "longitud_ida": 5.0,
+            "seccion_transversal": 4.0
+        },
+        "resultados": {
+            "conversion_area": 4e-06,
+            "longitud_total": 10.0,
+            "resistencia_cable": 0.041999999999999996,
+            "resistencia_total": 10.042,
+            "corriente_estimada": 1.1949810794662419,
+            "caida_tension_cable": 0.05018920533758215,
+            "potencia_disipada": 0.05997515077185679
+        }
+    },
+    {
+        "id": 4,
+        "fecha": "2026-11-24 09:12:01.428901",
+        "entradas": {
+            "tension": 12.0,
+            "resistencia_carga": 10.0,
+            "material": "cobre",
+            "longitud_ida": 5.0,
+            "seccion_transversal": 1.5
+        },
+        "resultados": {
+            "conversion_area": 1.5e-06,
+            "longitud_total": 10.0,
+            "resistencia_cable": 0.11199999999999997,
+            "resistencia_total": 10.112,
+            "corriente_estimada": 1.1867088607594936,
+            "caida_tension_cable": 0.13291139240506325,
+            "potencia_disipada": 0.1577271270629706
+        }
+    }
+]

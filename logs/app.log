@@ -1,0 +1,15 @@
+2026-11-24 09:07:46,138 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 09:07:46,138 - INFO - La funcion procesar_calculo tardo 0.0165 segundos.
+2026-11-24 09:07:46,153 - INFO - Cï¿½lculo ID 1 guardado con ï¿½xito.
+2026-11-24 09:09:12,878 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 09:09:12,879 - INFO - La funcion procesar_calculo tardo 0.0012 segundos.
+2026-11-24 09:09:12,887 - INFO - Cï¿½lculo ID 2 guardado con ï¿½xito.
+2026-11-24 09:10:28,600 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 09:10:28,600 - INFO - La funcion procesar_calculo tardo 0.0008 segundos.
+2026-11-24 09:10:28,608 - INFO - Cï¿½lculo ID 3 guardado con ï¿½xito.
+2026-11-24 09:12:01,426 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 09:12:01,426 - INFO - La funcion procesar_calculo tardo 0.0006 segundos.
+2026-11-24 09:12:01,431 - INFO - Cï¿½lculo ID 4 guardado con ï¿½xito.
+2026-11-24 09:13:15,787 - WARNING - Validacion rechazada: Formato de seccion invalido (dos).
+2026-11-24 09:42:31,150 - WARNING - Validacion rechazada: Tensiï¿½n fuera de rango (-5.0).
+2026-11-24 09:43:59,786 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
