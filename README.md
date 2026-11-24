@@ -1,7 +1,21 @@
 # Calculadora-web-de-corriente-electrica-y-resistencia
 en este proyecto se desarrollara una calculadora web de corriente electrica con resistencias, facilitando el calculo de las mismas
 esto es temporal chavales jeje
-
+---
 
 ## MODULOS SERVICIOS Y UTILIDADES
 integracion de ambos modulos.. esto es temporal chavales
+
+## MODULO MATEMATICA
+### Función materiales()
+Diccionario que almacena las resistividades de 4 materiales: cobre, aluminio, oro y plata. Como variable esta función esta guardada como dic_materiales
+
+### Funcion modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal)
+De acuerdo a las variables que el usuario dio en la función anterior, se calcularan los siguientes parámetros en este respectivo orden: Conversión de área, longitud total, resistencia del cable, resistencia total, corriente estimada, caída de la tensión del cable y la potencia disipada
+
+### Notas
+Este modulo actualmente hace los cálculos, pero no hace el print. Ni tampoco coloca las unidades correspondientes de cada parametro
+
+
+
+
