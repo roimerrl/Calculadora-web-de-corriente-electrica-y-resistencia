@@ -1,24 +1,10 @@
-def materiales(): # Resistividades de los materiales
-    materiales = {
-        "cobre": 1.68 * 10 ** -8,
-        "aluminio": 2.65 * 10 ** -8,
-        "oro": 2.21 * 10 ** -8,
-        "plata": 1.58 * 10 ** -8
-        }
+from Calculadora import materiales
+
+def modelo_matematico(tension, resistencia_carga, material, longitud_ida, seccion_transversal):
+    # Llamamos a la funcion materiales()
+    dic_materiales = materiales()
+    resistividad = dic_materiales[material]
     
-    return materiales
-
-def parametros(dic_materiales): # Es importante que en la calculadora se especifiquen las unidades
-    tension = float(input(" Ingrese el voltaje DC suministrado por la fuente: ")) # Voltios
-    resistencia_carga = float(input(" ingrese resistencia del dispositivo conectado: ")) # Ohmios
-    material = input("Ingrese el material a utilizar (cobre, aluminio, oro, plata): ").lower() # Material que se va a utilizar
-    resistividad = dic_materiales[material] # Resistividad del material llamando a la funcion materiales()
-    longitud_ida = float(input(" Ingrese la distancia fuente-carga: ")) # Metros 
-    seccion_transversal = float(input(" Ingrese el area del material conductor: ")) # mm^2
-
-    return tension, resistencia_carga, material, resistividad, longitud_ida, seccion_transversal
-
-def modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal):
     # Se realizaran los calculos en el siguiente orden:
     conversion_area = seccion_transversal * 10 ** -6 # Para pasar de mm^2 a m^2
     longitud_total = longitud_ida * 2 
@@ -28,13 +14,14 @@ def modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, se
     caida_tension_cable = corriente_estimada * resistencia_cable # Voltios
     potencia_disipada = (corriente_estimada ** 2) * resistencia_cable # Wats
 
-    return conversion_area, longitud_total, resistencia_cable, resistencia_total, corriente_estimada, caida_tension_cable, potencia_disipada
-
-dic_materiales = materiales()
-tension, resistencia_carga, material, resistividad, longitud_ida, seccion_transversal  = parametros(dic_materiales)
-modelo_matematico(tension, resistencia_carga, resistividad, longitud_ida, seccion_transversal)
-
-# Se completo la prueba que el profe coloco para comprobar que el sistema funcione correctamente, 
-# El modulo actualmente solo hace los calculos, mas no hace el print
-
+    # Devolvemos un diccionario para que Streamlit lo pueda leer facil
+    return {
+        "conversion_area": conversion_area,
+        "longitud_total": longitud_total,
+        "resistencia_cable": resistencia_cable,
+        "resistencia_total": resistencia_total,
+        "corriente_estimada": corriente_estimada,
+        "caida_tension_cable": caida_tension_cable,
+        "potencia_disipada": potencia_disipada
+    }
 
