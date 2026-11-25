@@ -13,3 +13,111 @@
 2026-11-24 09:13:15,787 - WARNING - Validacion rechazada: Formato de seccion invalido (dos).
 2026-11-24 09:42:31,150 - WARNING - Validacion rechazada: Tensiï¿½n fuera de rango (-5.0).
 2026-11-24 09:43:59,786 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
+2026-11-24 09:48:32,883 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto
+2026-11-24 11:20:54,559 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
+2026-11-24 11:21:02,434 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
+2026-11-24 11:22:08,638 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 11:22:08,639 - INFO - La funcion procesar_calculo tardo 0.0223 segundos.
+2026-11-24 11:22:08,726 - INFO - Cálculo ID 5 guardado con éxito.
+2026-11-24 11:25:06,910 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 11:25:06,911 - INFO - La funcion procesar_calculo tardo 0.0007 segundos.
+2026-11-24 11:25:06,939 - INFO - Cálculo ID 6 guardado con éxito.
+2026-11-24 11:25:55,206 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
+2026-11-24 11:26:25,307 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
+2026-11-24 11:26:51,133 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-24 11:26:51,134 - INFO - La funcion procesar_calculo tardo 0.0004 segundos.
+2026-11-24 11:26:51,141 - INFO - Cálculo ID 7 guardado con éxito.
+2026-11-24 11:41:42,975 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto
+2026-11-24 23:45:24,021 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto
+2026-11-24 23:45:24,106 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto
+2026-11-25 01:19:56,804 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto
+2026-11-25 01:30:08,099 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Se ha forzado la interrupción de una conexión existente por el host remoto
+2026-11-25 01:31:10,398 - WARNING - Validacion rechazada: Tensión fuera de rango (0.0).
+2026-11-25 01:31:25,990 - WARNING - Validacion rechazada: Resistencia de carga fuera de rango (0.0).
+2026-11-25 01:31:35,825 - WARNING - Validacion rechazada: Longitud de ida fuera de rango (0.0).
+2026-11-25 01:31:40,113 - WARNING - Validacion rechazada: Seccion transversal vacia.
+2026-11-25 01:31:42,592 - WARNING - Validacion rechazada: Seccion transversal vacia.
+2026-11-25 01:31:45,607 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 01:31:45,607 - INFO - La funcion procesar_calculo tardo 0.0006 segundos.
+2026-11-25 01:31:45,691 - INFO - Cálculo ID 8 guardado con éxito.
+2026-11-25 01:43:53,424 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 01:43:53,426 - INFO - La funcion procesar_calculo tardo 0.0014 segundos.
+2026-11-25 01:43:53,432 - INFO - Cálculo ID 9 guardado con éxito.
+2026-11-25 02:05:01,607 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:05:01,607 - INFO - La funcion procesar_calculo tardo 0.0005 segundos.
+2026-11-25 02:05:01,625 - INFO - Cálculo ID 10 guardado con éxito.
+2026-11-25 02:06:42,663 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:06:42,666 - INFO - La funcion procesar_calculo tardo 0.0023 segundos.
+2026-11-25 02:06:42,669 - INFO - Cálculo ID 11 guardado con éxito.
+2026-11-25 02:08:58,244 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:08:58,244 - INFO - La funcion procesar_calculo tardo 0.0003 segundos.
+2026-11-25 02:08:58,249 - INFO - Cálculo ID 12 guardado con éxito.
+2026-11-25 02:12:17,847 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:12:17,848 - INFO - La funcion procesar_calculo tardo 0.0012 segundos.
+2026-11-25 02:12:17,855 - INFO - Cálculo ID 13 guardado con éxito.
+2026-11-25 02:13:59,576 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:13:59,577 - INFO - La funcion procesar_calculo tardo 0.0012 segundos.
+2026-11-25 02:13:59,583 - INFO - Cálculo ID 14 guardado con éxito.
+2026-11-25 02:14:52,538 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:14:52,539 - INFO - La funcion procesar_calculo tardo 0.0004 segundos.
+2026-11-25 02:14:52,543 - INFO - Cálculo ID 15 guardado con éxito.
+2026-11-25 02:16:20,915 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:16:20,916 - INFO - La funcion procesar_calculo tardo 0.001 segundos.
+2026-11-25 02:16:20,922 - INFO - Cálculo ID 16 guardado con éxito.
+2026-11-25 02:17:32,850 - INFO - Validaciones de entrada superadas correctamente.
+2026-11-25 02:17:32,851 - INFO - La funcion procesar_calculo tardo 0.0003 segundos.
+2026-11-25 02:17:32,855 - INFO - Cálculo ID 17 guardado con éxito.
