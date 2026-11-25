@@ -1,6 +1,7 @@
 import json
 import os
 import datetime
+from servicios.logs import logger 
 
 RUTA_JSON = "data/historial.json"
 
@@ -13,7 +14,10 @@ def guardar_calculo(entradas, resultados):
     historial = leer_historial()
 
     # Obtenemos la fecha actual como texto
-    fecha_actual = str(datetime.datetime.now())
+    fecha_actual = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    # formato id de 4 digitos
+    nuevo_id = f"{len(historial) + 1:04d}"
 
     # Creamos el nuevo registro
     registro = {
@@ -27,21 +31,26 @@ def guardar_calculo(entradas, resultados):
     historial.append(registro)
 
     # Guardamos el archivo
-    archivo = open(RUTA_JSON, "w", encoding="utf-8")
-    json.dump(historial, archivo, indent=4)
-    archivo.close()
-    
-    return registro["id"]
+    with open(RUTA_JSON, "w", encoding="utf-8") as archivo:
+        json.dump(historial, archivo, indent=4, ensure_ascii=False)
+
+    logger.info(f"Cálculo guardado exitosamente con ID: {nuevo_id}")
+    return nuevo_id
 
 def leer_historial():
     if not os.path.exists(RUTA_JSON):
         return []
         
     try:
-        archivo = open(RUTA_JSON, "r", encoding="utf-8")
-        datos = json.load(archivo)
-        archivo.close()
+        with open(RUTA_JSON, "r", encoding="utf-8") as archivo:
+            datos = json.load(archivo)
         return datos
-    except:
-        # Si el archivo esta dañado, devolvemos una lista vacia
+    
+    except json.JSONDecodeError:
+        # Si el archivo está dañado, devolvemos una lista vacía y avisamos
+        logger.warning("El archivo historial.json está dañado. Se devuelve lista vacía.")
+        return []
+    
+    except Exception as e:
+        logger.error(f"Error al leer historial: {e}")
         return []
