@@ -1,16 +1,17 @@
 import streamlit as st
 from servicios.historial import leer_historial
+from servicios.logs import logger
 from utilidades.generadores import generar_historial
 
 def pagina_historial():
     st.title(" Historial de Cálculos")
-    st.write("Consulta todos los Calculos anteriormente realizados.")
+    st.write("Consulta todos los cálculos anteriormente realizados.")
     st.write("---")
 
     historial = leer_historial()
 
     if len(historial) == 0:
-        st.warning("**Aún no hay calculos en el historial,** ve a la sección de *Calculadora* o preciona **¡CALCULAR YA!** para ser redirigido y realiza tu primer cálculo ")
+        st.warning("**Aún no hay calculos en el historial,** ve a la sección de *Calculadora* o presiona **¡CALCULAR YA!** para ser redirigido y realiza tu primer cálculo ")
         st.write("---")
 
         #---Boton de Cacular ya ----
@@ -27,20 +28,26 @@ def pagina_historial():
 
         #---- Filtro de material----
         with col1:
-            opciones_materiales = ["Todos", "Cobre", "Aluminio", "Oro", "Plata"]
-            filtro_material = st.selectbox("**Seleccione el material a filtrar**", opciones_materiales)
+            # Se toman del diccionario de materiales: si mañana agregan otro, el filtro lo incluye
+            from Calculadora.materiales import materiales
+            opciones_materiales = ["Todos"] + [m.capitalize() for m in materiales()]
+            filtro_material = st.selectbox("**Seleccione el material a filtrar**", opciones_materiales, key="filtro_material")
 
         #----Filtro de fecha----
         with col2:
-            filtro_fecha = st.text_input("**Ingrese fecha a filtrar** — *Ej: 2026-11-25:*", "")
+            filtro_fecha = st.text_input("**Ingrese fecha a filtrar** — *Ej: 2026-11-25:*", "", key="filtro_fecha")
 
         
         st.write("")
         limpiar_filtro = st.button("Limpiar filtro",type="primary" , use_container_width=True)
 
     if limpiar_filtro:
-        filtro_fecha = ""
-        filtro_material = "Todos"
+        # Se borran las claves de los widgets de la memoria de Streamlit;
+        # solo reasignar las variables locales NO limpiaba los controles.
+        for clave in ("filtro_material", "filtro_fecha"):
+            if clave in st.session_state:
+                del st.session_state[clave]
+        st.rerun()
 
         
         # convertimos el  input en minuscula para comparar con el json
@@ -59,6 +66,8 @@ def pagina_historial():
 
 
     if len(historial_filtrado) == 0:  # si json esta vacio en ese filtro 
+        # Registramos el aviso en los logs (WARNING: no detiene la aplicación)
+        logger.warning("Filtro del historial sin coincidencias.")
         st.warning("**No se encontraron calculos en esta filtración**")
         return
     st.write("")
@@ -78,7 +87,7 @@ def pagina_historial():
             "Longitud (m)": c["entradas"]["longitud_ida"],
             "Sección (mm²)": c["entradas"] ["seccion_transversal"],
             "Resistencia del cable - Rc (Ω)": round(c["resultados"] ["resistencia_cable"], 4),
-            "Resistenacia total - Rt (Ω)": round(c["resultados"]["resistencia_total"], 4),
+            "Resistencia total - Rt (Ω)": round(c["resultados"]["resistencia_total"], 4),
             "Corriente - I (A)": round(c["resultados"]["corriente_estimada"], 4),
             "Caida de la tensión del cable - Vc (V)": round(c["resultados"]["caida_tension_cable"], 4),
             "Potencia disipada - Pc (W)": round(c["resultados"]["potencia_disipada"], 4),

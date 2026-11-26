@@ -1,6 +1,4 @@
 import streamlit as st
-from datetime import datetime, date
-from secciones.bienvenida import pagina_bienvenida
 from secciones.menu_tabs import navegacion
 
 

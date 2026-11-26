@@ -1,12 +1,18 @@
 # Ignorar archivos de configuración  local
 *.env
-
+.streamlit/secrets.toml
 
 #Ignorar de dependencias
 node_modules/
 __pycache__/
+*.pyc
 .venv/
 venv/
+
+# Reportes CSV generados (se ignora el contenido,
+# pero la carpeta se mantiene en el repositorio con el archivo .gitkeep)
+reportes/*
+!reportes/.gitkeep
 
 #Ignorar archivos del sistema
 .DS_Store

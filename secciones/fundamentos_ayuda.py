@@ -1,15 +1,15 @@
 import streamlit as st
 
 def pagina_fundamentos():
-    st.title(" Fundamentos / Ayuda")
-    st.write("Bienvenido a la sección de documentación del simulador. Aquí encontrarás toda la teoría y las reglas que utiliza la aplicación para realizar los calculos.")
+    st.title(" Fundamentos y Ayuda")
+    st.write("Bienvenido a la sección de documentación del simulador. Aquí encontrarás toda la teoría y las reglas que utiliza la aplicación para realizar los cálculos.")
     st.write("---")
 
     # Creamos 4 pestañas para organizar la información
     tab1, tab2, tab3, tab4 = st.tabs([
         " Parámetros de Entrada", 
         " Fórmulas Matemáticas", 
-        " Ejemplo de Comprobación", 
+        " Caso de Comprobación", 
         " Supuestos y Limitaciones"
     ])
 

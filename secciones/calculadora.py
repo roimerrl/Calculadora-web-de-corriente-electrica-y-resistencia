@@ -1,6 +1,7 @@
 import streamlit as st
 from Calculadora.matematica import modelo_matematico
 from Calculadora.validaciones import validar_entradas
+from Calculadora.materiales import materiales
 from servicios.historial import guardar_calculo
 from servicios.logs import logger
 from utilidades.decoradores import medir_tiempo
@@ -31,14 +32,16 @@ def pagina_calculadora():   # Toda la sección de calculadora
                 tension=st.number_input("**Tensión de la fuente (v) —** *Ejemplo: 12*" , step = 1.0, key = "tension_input") 
             with col2:
             # ----Input de resistencia-----
-                resistencia_carga=st.number_input("**Resistenacia de la carga (Ω) —** *Ejemplo: 10*", step = 1.0, key = "resistencia_input")
+                resistencia_carga=st.number_input("**Resistencia de la carga (Ω) —** *Ejemplo: 10*", step = 1.0, key = "resistencia_input")
 
             col3, col4 = st.columns(2)
 
             with col3:
             #---- menu de input de material ----
             # Se guardan los input en el espacio de memoria especificado para poder controlarlos 
-                material=st.selectbox("**Material —** *Ejemplo: Plata* ",["Cobre", "Oro", "Plata", "Aluminio"], key = "material_input")
+            # Las opciones salen del diccionario de materiales: si mañana se agrega otro material, el menú lo incluye solo
+                opciones_materiales = [m.capitalize() for m in materiales()]
+                material=st.selectbox("**Material —** *Ejemplo: Cobre* ", opciones_materiales, key = "material_input")
             with col4: 
             #---- Input de longuitud de ida ----
                 longitud_ida=st.number_input("**Longitud de ida (m) —** *Ejemplo: 5*", step = 1.0, key = "longitud_input")
@@ -80,7 +83,8 @@ def pagina_calculadora():   # Toda la sección de calculadora
                 "seccion_transversal": a,
             }
             id_guardado = guardar_calculo(entradas_dict, resultados)
-            logger.info(f"Cálculo ID {id_guardado} guardado con éxito.")
+            # Mensaje alineado con el formato de referencia del enunciado
+            logger.info(f"cálculo completado | id={id_guardado}")
 
             st.success(f" Cálculo realizado con exito.")
             st.write("---")
@@ -122,8 +126,8 @@ def pagina_calculadora():   # Toda la sección de calculadora
             #Muestra adicional
 
             with st.expander("Muestra de conversión y longitud"):   # recuadro que se expande
-                st.write(f"**Área converitida a m²:** {resultados['conversion_area']} m²")   
-                st.write(f"**Logitud total del cable ida y vuelta:** {resultados['longitud_total']} m")
+                st.write(f"**Área convertida a m²:** {resultados['conversion_area']} m²")   
+                st.write(f"**Longitud total del cable (ida y vuelta):** {resultados['longitud_total']} m")
 
             #--------Repaso de los datos ingresados-------
             st.warning(f"""
@@ -136,10 +140,14 @@ def pagina_calculadora():   # Toda la sección de calculadora
                     """)
 
 
-        except ValueError as error:  # gualda ValueError en la variable para que no reaccione
+        except ValueError as error:  # captura ValueError en la variable para que no reaccione
             st.error(f" Error de validación: {error}")  # mensajito de error
             st.info("Asegurate de ingresar datos mayores a cero (0) y que el formato de la sección transversal ingresada sea correcta")
-            # Mesaje de sugerencia 
+            # Mensaje de sugerencia
 
-
-
+        except Exception as error:
+            # Cualquier otro fallo (p. ej. no poder escribir el JSON) queda
+            # registrado como ERROR en app.log y no rompe la aplicación
+            logger.error(f"Error inesperado al procesar el cálculo: {error}")
+            st.error(f" Ocurrió un error inesperado al guardar el cálculo: {error}")
+            st.info("Revisa la sección de Logs Técnicos para ver el detalle del evento registrado.")
