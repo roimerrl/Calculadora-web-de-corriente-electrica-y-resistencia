@@ -30,14 +30,14 @@ def validar_numero_positivo(valor, nombre_campo):
 
 
 def validar_entradas(tension, resistencia_carga, material, longitud_ida, seccion_transversal):
-    """
+    r"""
     Valida los 5 parámetros de entrada del circuito DC.
 
-    - Patrón utilizado: r"^\\d+([.,]\\d+)?\\s*(mm2|mm²)?$" (ignora mayúsculas y minúsculas)
+    - Patrón utilizado: ^\d+([.,]\d+)?\s*(mm2|mm²)?$ (ignora mayúsculas y minúsculas)
       * ^ y $ : Obliga a que todo el texto cumpla el formato de principio a fin.
-      * \\d+ : Exige uno o más dígitos enteros al inicio.
-      * ([.,]\\d+)? : Permite de forma opcional un punto o coma seguido de decimales.
-      * \\s* : Permite cero o más espacios antes de la unidad.
+      * \d+ : Exige uno o más dígitos enteros al inicio.
+      * ([.,]\d+)? : Permite de forma opcional un punto o coma seguido de decimales.
+      * \s* : Permite cero o más espacios antes de la unidad.
       * (mm2|mm²)?: Permite de forma opcional la unidad mm2 o mm².
     - Formatos admitidos: "2.5", "2,5", "2.5 mm2", "2,5 mm²", "4"
     - Formatos rechazados: "" (vacío), "-2.5" (negativos), "0" (cero), "abc" (texto),

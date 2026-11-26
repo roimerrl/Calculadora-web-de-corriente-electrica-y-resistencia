@@ -1,5 +1,5 @@
-import streamlit as st    
-import os     # libreria para verificar si existe la imagen
+import streamlit as st
+from utilidades.rutas import RUTA_IMG_CALCULADORA
 
 def pagina_bienvenida():
     st.title(" Bienvenido a la Calculadora de Circuitos DC")
@@ -10,8 +10,8 @@ def pagina_bienvenida():
 
     # ------------ Columna Izquierda ----------
     with col1:             # Primera mitad izquierda
-        if os.path.exists("calculadora.png"):   # Si existe la imagen
-            st.image("calculadora.png", width=385)  
+        if RUTA_IMG_CALCULADORA.exists():   # Si existe la imagen (ruta desde la raíz del proyecto)
+            st.image(str(RUTA_IMG_CALCULADORA), width=385)  
         else:
             st.error("La imagen no se encuentra en la carpeta del proyecto. Por favor, asegúrese de que el archivo 'calculadora.png' esté presente.")   # sino mensajito de alerta
 
@@ -20,7 +20,7 @@ def pagina_bienvenida():
     with col2:
         
         st.markdown(
-                 "<h1 style='text-align: center;'>Cátedra: programación I</h3>", unsafe_allow_html=True,
+                 "<h3 style='text-align: center;'>Cátedra: Programación I</h3>", unsafe_allow_html=True,
                 )   # Titulo centrado
         st.write("") # espacio en blanco
         #------ Descripción directa------

@@ -1,15 +1,40 @@
-2026-11-24 09:07:46,138 - INFO - Validaciones de entrada superadas correctamente.
-2026-11-24 09:07:46,138 - INFO - La funcion procesar_calculo tardo 0.0165 segundos.
-2026-11-24 09:07:46,153 - INFO - C�lculo ID 1 guardado con �xito.
-2026-11-24 09:09:12,878 - INFO - Validaciones de entrada superadas correctamente.
-2026-11-24 09:09:12,879 - INFO - La funcion procesar_calculo tardo 0.0012 segundos.
-2026-11-24 09:09:12,887 - INFO - C�lculo ID 2 guardado con �xito.
-2026-11-24 09:10:28,600 - INFO - Validaciones de entrada superadas correctamente.
-2026-11-24 09:10:28,600 - INFO - La funcion procesar_calculo tardo 0.0008 segundos.
-2026-11-24 09:10:28,608 - INFO - C�lculo ID 3 guardado con �xito.
-2026-11-24 09:12:01,426 - INFO - Validaciones de entrada superadas correctamente.
-2026-11-24 09:12:01,426 - INFO - La funcion procesar_calculo tardo 0.0006 segundos.
-2026-11-24 09:12:01,431 - INFO - C�lculo ID 4 guardado con �xito.
-2026-11-24 09:13:15,787 - WARNING - Validacion rechazada: Formato de seccion invalido (dos).
-2026-11-24 09:42:31,150 - WARNING - Validacion rechazada: Tensi�n fuera de rango (-5.0).
-2026-11-24 09:43:59,786 - WARNING - Validacion rechazada: Tensi�n fuera de rango (0.0).
+2026-11-26 02:22:30 | INFO | historial.leer_historial | Historial leído correctamente (0 cálculos).
+2026-11-26 02:22:31 | INFO | historial.leer_historial | Historial leído correctamente (0 cálculos).
+2026-11-26 02:22:47 | INFO | menu_tabs.navegacion | Aplicación iniciada por el usuario.
+2026-11-26 02:23:02 | INFO | validaciones.validar_entradas | Validaciones de entrada superadas correctamente.
+2026-11-26 02:23:02 | INFO | decoradores.envoltura | La funcion procesar_calculo tardo 0.0003 segundos.
+2026-11-26 02:23:02 | INFO | historial.leer_historial | Historial leído correctamente (0 cálculos).
+2026-11-26 02:23:02 | INFO | historial.guardar_calculo | Cálculo guardado exitosamente con ID: 0001
+2026-11-26 02:23:02 | INFO | calculadora.pagina_calculadora | cálculo completado | id=0001
+2026-11-26 02:23:34 | INFO | validaciones.validar_entradas | Validaciones de entrada superadas correctamente.
+2026-11-26 02:23:34 | INFO | decoradores.envoltura | La funcion procesar_calculo tardo 0.0003 segundos.
+2026-11-26 02:23:34 | INFO | historial.leer_historial | Historial leído correctamente (1 cálculos).
+2026-11-26 02:23:34 | INFO | historial.guardar_calculo | Cálculo guardado exitosamente con ID: 0002
+2026-11-26 02:23:34 | INFO | calculadora.pagina_calculadora | cálculo completado | id=0002
+2026-11-26 02:26:12 | INFO | validaciones.validar_entradas | Validaciones de entrada superadas correctamente.
+2026-11-26 02:26:12 | INFO | decoradores.envoltura | La funcion procesar_calculo tardo 0.0003 segundos.
+2026-11-26 02:26:12 | INFO | historial.leer_historial | Historial leído correctamente (2 cálculos).
+2026-11-26 02:26:12 | INFO | historial.guardar_calculo | Cálculo guardado exitosamente con ID: 0003
+2026-11-26 02:26:12 | INFO | calculadora.pagina_calculadora | cálculo completado | id=0003
+2026-11-26 02:27:27 | INFO | validaciones.validar_entradas | Validaciones de entrada superadas correctamente.
+2026-11-26 02:27:27 | INFO | decoradores.envoltura | La funcion procesar_calculo tardo 0.0003 segundos.
+2026-11-26 02:27:27 | INFO | historial.leer_historial | Historial leído correctamente (3 cálculos).
+2026-11-26 02:27:27 | INFO | historial.guardar_calculo | Cálculo guardado exitosamente con ID: 0004
+2026-11-26 02:27:27 | INFO | calculadora.pagina_calculadora | cálculo completado | id=0004
+2026-11-26 02:31:12 | WARNING | validaciones.validar_entradas | Validacion rechazada: Formato de seccion invalido (hola richard 67mm²).
+2026-11-26 02:34:01 | WARNING | validaciones.validar_numero_positivo | Validacion rechazada: Tensión fuera de rango (-10.0).
+2026-11-26 02:37:01 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:38:21 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:38:21 | INFO | reportes.exportar_csv | Reporte CSV exportado exitosamente a: C:\Users\User\Desktop\Calculadora-web-de-corriente-electrica-y-resistencia\reportes\reporte_calculos.csv
+2026-11-26 02:40:09 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:54:54 | INFO | menu_tabs.navegacion | Aplicación iniciada por el usuario.
+2026-11-26 02:54:54 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:55:03 | INFO | menu_tabs.navegacion | Aplicación iniciada por el usuario.
+2026-11-26 02:55:03 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:55:51 | INFO | menu_tabs.navegacion | Aplicación iniciada por el usuario.
+2026-11-26 02:55:51 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:56:50 | INFO | menu_tabs.navegacion | Aplicación iniciada por el usuario.
+2026-11-26 02:56:51 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:57:33 | INFO | menu_tabs.navegacion | Aplicación iniciada por el usuario.
+2026-11-26 02:58:32 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
+2026-11-26 02:58:32 | INFO | historial.leer_historial | Historial leído correctamente (4 cálculos).
